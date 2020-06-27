@@ -27,7 +27,7 @@ pipeline {
  stage("Build image") {
  steps {
  script {
- myapp = docker.build("asifulla4/tomactimage:${env.BUILD_ID}")
+ myapp = docker.build("asifulla4/tomactimage")
  }
  }
  }
