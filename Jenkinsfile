@@ -32,7 +32,7 @@ pipeline {
 		steps {
                    script {
                     //myimage = docker.build("asifulla4/tomactimage:${env.BUILD_ID}")
-		     myimage = docker.build("gcr.io/asif-first-project/asifulla4/tomactimage:${env.BUILD_ID}")
+		     myimage = docker.build("eu.gcr.io/asif-first-project/asifulla4/tomactimage:${env.BUILD_ID}")
                    }
                 }
 	   }
