@@ -31,16 +31,16 @@ pipeline {
 	   stage('Build Docker Image') { 
 		steps {
                    script {
-                    myimage = docker.build("asifulla4/tomactimage:${env.BUILD_ID}")
-		      /*myimage = docker.build("gcr.io/asifulla4/tomactimage:${env.BUILD_ID}")*/
+                    //myimage = docker.build("asifulla4/tomactimage:${env.BUILD_ID}")
+		     myimage = docker.build("gcr.io/asif-first-project/asifulla4/tomactimage:${env.BUILD_ID}")
                    }
                 }
 	   }
 	   stage("Push Docker Image") {
                 steps {
                    script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
-                    /* docker.withRegistry('https://gcr.io', 'gcr-devops') {*/
+                    //docker.withRegistry('https://registry.hub.docker.com', 'docker-hub') {
+                    docker.withRegistry('https://eu.gcr.io') {
                             myimage.push("${env.BUILD_ID}")		
                      }
 			   
