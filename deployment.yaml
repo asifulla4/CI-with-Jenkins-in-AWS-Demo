@@ -22,7 +22,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webapp1-svc
+  name: myapp4
   labels:
     app: myapp4
 spec:
