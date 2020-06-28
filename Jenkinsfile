@@ -3,8 +3,8 @@ pipeline {
 	environment {
 		
 		PROJECT_ID = 'asif-first-project'
-                CLUSTER_NAME = 'europe-north1-a'
-                LOCATION = 'us-central1-c'
+                CLUSTER_NAME = 'kr-cluster-project'
+                LOCATION = 'europe-north1-a'
                 CREDENTIALS_ID = 'k8asifsvc'
 		
 	}
