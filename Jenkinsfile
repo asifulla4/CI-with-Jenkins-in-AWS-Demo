@@ -4,7 +4,7 @@ pipeline {
  PROJECT_ID = 'asif-first-project'
  CLUSTER_NAME = 'kr-cluster-project'
  LOCATION = 'us-central1-c'
- CREDENTIALS_ID = 'asif-first-project'
+ CREDENTIALS_ID = 'gcsvc'
  }
  stages {
  stage("Checkout code") {
