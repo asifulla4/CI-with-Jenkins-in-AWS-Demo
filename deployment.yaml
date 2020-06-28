@@ -2,34 +2,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp5
+  name: gcrmyapp5
 spec:
   replicas: 2
   selector:
    matchLabels:
-    app: myapp5
+    app: gcrmyapp5
   template:
     metadata:
       labels:
-        app: myapp5
+        app: gcrmyapp5
     spec:
       containers:
-      - name: myapp5
-        image: asifulla4/tomactimage:tagversion
+      - name: gcrmyapp5
+        image: eu.gcr.io/asif-first-project/asifulla4/tomactimage:tagversion
         ports:
         - containerPort: 8080
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: myapp5
+  name: gcrmyapp5
   labels:
-    app: myapp5
+    app: gcrmyapp5
 spec:
   type: LoadBalancer
   selector:
-    app: myapp5
+    app: gcrmyapp5
   ports:
   - protocol: TCP
-    port: 5611
+    port: 6655
     targetPort: 8080
